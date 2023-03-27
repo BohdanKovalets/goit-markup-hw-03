@@ -9,6 +9,31 @@ body {
   background-color: var(---main-backgroung-color);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+}
+address {
+  font-style: normal;
+}
+
 .list {
   list-style: none;
 }
@@ -17,10 +42,25 @@ body {
   text-decoration: none;
 }
 
+.container {
+  width: 1158px;
+  margin: 0 auto;
+}
+
 /**--------------------------HEADER-------------------------**/
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
 }
 .header-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.container-header {
+  display: flex;
+  align-items: center;
 }
 .logo-link {
   font-family: "Raleway", sans-serif;
@@ -41,12 +81,15 @@ body {
   letter-spacing: 0.03em;
   color: #2e2f42;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 .link {
 }
 .list {
 }
 .header-list {
+  display: flex;
+  gap: 40px;
 }
 .header-item {
 }
@@ -70,6 +113,7 @@ body {
   font-style: normal;
 }
 .header-address-list {
+  display: flex;
 }
 .header-address-link {
   font-weight: 400;
@@ -77,6 +121,7 @@ body {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
+  margin-right: 40px;
 }
 
 .header-address-link:focus {
@@ -89,7 +134,11 @@ body {
 /**--------------------------HERO-------------------------**/
 .hero {
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  justify-content: center;
 }
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -97,6 +146,10 @@ body {
   letter-spacing: 0.02em;
   color: #ffffff;
   text-align: center;
+  width: 496px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 .hero-button {
   font-family: "Roboto", sans-serif;
@@ -107,6 +160,11 @@ body {
   color: #ffffff;
   cursor: pointer;
   background-color: #4d5ae5;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 16px 32px;
 }
 
 .hero-button:hover {
@@ -118,10 +176,15 @@ body {
 
 /**----------------------OPPORTUNITIES---------------------**/
 .opportunities {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
 .hidden-opportunities-title {
 }
 .opportunities-list {
+  display: flex;
+  gap: 24px;
 }
 .opportunities-item {
 }
@@ -142,6 +205,7 @@ body {
 
 /**--------------------------WORK-------------------------**/
 .work {
+  padding-bottom: 120px;
 }
 .work-title {
   font-weight: 700;
@@ -151,8 +215,14 @@ body {
   color: #2e2f42;
   text-align: center;
   text-transform: capitalize;
+  padding-bottom: 72px;
 }
 .work-list {
+  display: flex;
+  gap: 24px;
+}
+.work-list li {
+  width: calc((100% - 60px) / 3);
 }
 .work-item {
 }
@@ -160,6 +230,8 @@ body {
 /**--------------------------TEAM-------------------------**/
 .team {
   background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .team-title {
   font-weight: 700;
@@ -169,13 +241,19 @@ body {
   color: #2e2f42;
   text-align: center;
   text-transform: capitalize;
+  padding-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
+  border-radius: 0px 0px 4px 4px;
 }
+
 .list {
 }
 .team-item {
   background-color: #ffffff;
+  margin: 0 auto;
 }
 .about-team-title {
   font-weight: 500;
@@ -183,6 +261,8 @@ body {
   line-height: calc(24 / 20);
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 32px;
+  text-align: center;
 }
 .about-team-title-work {
   font-weight: 400;
@@ -190,11 +270,16 @@ body {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
+  margin-bottom: 32px;
+  padding-top: 8px;
+  text-align: center;
 }
 
 /**--------------------------FOOTER-------------------------**/
 .footer {
   background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .logo-link {
   font-family: "Raleway", sans-serif;
@@ -223,6 +308,8 @@ body {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  margin-top: 16px;
+  max-width: 264px;
 }
 
 /**-----------------------second page------------------------*/
@@ -230,8 +317,19 @@ body {
 /**-----------------------PORTFOLIO HEADER-------------------*/
 
 .portfolio-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
 }
 .portfolio-header-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.container-header-portfolio {
+  display: flex;
+  align-items: center;
 }
 .portfolio-logo-link {
   font-family: "Raleway", sans-serif;
@@ -252,10 +350,13 @@ body {
   letter-spacing: 0.03em;
   color: #2e2f42;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 .link {
 }
 .portfolio-header-list {
+  display: flex;
+  gap: 40px;
 }
 .portfolio-header-item {
 }
@@ -277,6 +378,7 @@ body {
   font-style: normal;
 }
 .portfolio-header-list-address {
+  display: flex;
 }
 .portfolio-address-link {
   font-weight: 400;
@@ -284,6 +386,7 @@ body {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
+  margin-right: 40px;
 }
 
 .portfolio-address-link:hover {
@@ -294,8 +397,17 @@ body {
 }
 
 /**-----------------------HERO PORTFOLIO------------------------*/
-.help-button-list {
+.hero-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
+.help-button-list {
+  padding-bottom: 72px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
 .list {
 }
 .help-button-item {
@@ -309,6 +421,9 @@ body {
   color: #4d5ae5;
   background-color: #f4f4fd;
   cursor: pointer;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+  padding: 12px 24px;
 }
 
 .help-button-btn:hover {
@@ -320,13 +435,17 @@ body {
   background-color: #404bbf;
 }
 
-.hero-portfolio {
-}
 .hero-portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
 .list {
 }
 .hero-portfolio-item {
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 .hero-portfolio-link {
 }
@@ -334,9 +453,11 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
-
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 32px;
+  padding-bottom: 8px;
+  margin-left: 16px;
 }
 .about-hero-portfolio-titles {
   font-weight: 400;
@@ -344,12 +465,16 @@ body {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
+  padding-bottom: 16px;
+  margin-left: 16px;
 }
 
 /**-----------------------PORTFOLIO FOOTER------------------------*/
 
 .portfolio-footer {
   background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .portfolio-footer-logo-link {
   font-family: "Raleway", sans-serif;
@@ -379,4 +504,6 @@ body {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  margin-top: 16px;
+  max-width: 264px;
 }
