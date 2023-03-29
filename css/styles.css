@@ -19,13 +19,15 @@ h6 {
   margin: 0;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding-left: 0;
 }
 
 button {
   cursor: pointer;
+  display: block;
 }
 img {
   display: block;
@@ -47,6 +49,20 @@ address {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /**--------------------------HEADER-------------------------**/
 .header {
   padding-top: 24px;
@@ -62,6 +78,13 @@ address {
   display: flex;
   align-items: center;
 }
+
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
 .logo-link {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -71,22 +94,12 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-}
-.header-logo {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  color: #2e2f42;
-  text-transform: uppercase;
   margin-right: 76px;
 }
-.link {
+.header-logo {
+  color: #2e2f42;
 }
-.list {
-}
+
 .header-list {
   display: flex;
   gap: 40px;
@@ -114,6 +127,7 @@ address {
 }
 .header-address-list {
   display: flex;
+  gap: 40px;
 }
 .header-address-link {
   font-weight: 400;
@@ -121,7 +135,6 @@ address {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
-  margin-right: 40px;
 }
 
 .header-address-link:focus {
@@ -136,7 +149,7 @@ address {
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
-  justify-content: center;
+  text-align: center;
 }
 
 .hero-title {
@@ -165,6 +178,7 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 16px 32px;
+  border: none;
 }
 
 .hero-button:hover {
@@ -194,6 +208,7 @@ address {
   line-height: calc(24 / 20);
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .about-opportunities-titles {
   font-weight: 400;
@@ -221,9 +236,7 @@ address {
   display: flex;
   gap: 24px;
 }
-.work-list li {
-  width: calc((100% - 60px) / 3);
-}
+
 .work-item {
 }
 
@@ -241,7 +254,7 @@ address {
   color: #2e2f42;
   text-align: center;
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .team-list {
   display: flex;
@@ -249,8 +262,6 @@ address {
   border-radius: 0px 0px 4px 4px;
 }
 
-.list {
-}
 .team-item {
   background-color: #ffffff;
   margin: 0 auto;
@@ -261,7 +272,6 @@ address {
   line-height: calc(24 / 20);
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-top: 32px;
   text-align: center;
 }
 .about-team-title-work {
@@ -270,9 +280,12 @@ address {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
-  margin-bottom: 32px;
-  padding-top: 8px;
   text-align: center;
+  margin-top: 8px;
+}
+
+.about-team-title-container {
+  padding: 32px 16px;
 }
 
 /**--------------------------FOOTER-------------------------**/
@@ -340,20 +353,13 @@ address {
   letter-spacing: 0.03em;
   color: #4d5ae5;
   text-transform: uppercase;
-}
-.portfolio-header-logo {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  color: #2e2f42;
-  text-transform: uppercase;
   margin-right: 76px;
 }
-.link {
+
+.portfolio-header-logo {
+  color: #2e2f42;
 }
+
 .portfolio-header-list {
   display: flex;
   gap: 40px;
@@ -386,7 +392,6 @@ address {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
-  margin-right: 40px;
 }
 
 .portfolio-address-link:hover {
@@ -402,14 +407,12 @@ address {
   padding-bottom: 120px;
 }
 .help-button-list {
-  padding-bottom: 72px;
+  margin-bottom: 72px;
   display: flex;
   gap: 24px;
   justify-content: center;
 }
 
-.list {
-}
 .help-button-item {
 }
 .help-button-btn {
@@ -441,11 +444,13 @@ address {
   justify-content: center;
   gap: 24px;
 }
-.list {
-}
+
 .hero-portfolio-item {
+}
+.hero-portfolio-titles-container {
   border: 1px solid #e7e9fc;
   border-top: none;
+  padding: 32px 16px;
 }
 .hero-portfolio-link {
 }
@@ -455,9 +460,6 @@ address {
   line-height: calc(24 / 20);
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-top: 32px;
-  padding-bottom: 8px;
-  margin-left: 16px;
 }
 .about-hero-portfolio-titles {
   font-weight: 400;
@@ -465,8 +467,6 @@ address {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #434455;
-  padding-bottom: 16px;
-  margin-left: 16px;
 }
 
 /**-----------------------PORTFOLIO FOOTER------------------------*/
@@ -486,8 +486,7 @@ address {
   color: #4d5ae5;
   text-transform: uppercase;
 }
-.link {
-}
+
 .portfolio-footer-logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
